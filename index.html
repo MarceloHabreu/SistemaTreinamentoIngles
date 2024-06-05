@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeakEase</title>
+  <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+  <link rel="stylesheet" href="bootstrap.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="principal.css" />
+</head>
+
+<body>
+  <div class="navbarContainer">
+    <a id="logo">SpeakEase</a>
+    <span class="icons" id="openSidebar"><i class="fa fa-bars" aria-hidden="true"
+        style="font-size: 19px !important; margin-top: 2px !important;"></i></span>
+    <div class="navbarItems">
+      <a href="index.html">Home</a>
+      <a href="./learning/learning.html">Learning</a>
+      <a href="./notes/notes.html">Notes</a>
+      <a href="./exercises/exercises.html">Practing</a>
+      <a href="./Recommendations/tips.html">Recommendations</a>
+    </div>
+    <div class="login">
+      <a id="btnLogin">Entrar</a>
+      <div id="loginForm" class="modalForm">
+        <main class="w-100 m-auto form-container">
+          <form class="modalForm-content animate" action="">
+            <span class="close" id="closeModalLogin">&times;</span>
+            <h1 class="h3 mb-3 fw-normal">Login</h1>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="emailInput" placeholder="E-mail" required>
+              <label for="floatingInput">E-mail</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="senhaInput" placeholder="Senha" required>
+              <label for="floatingInput">Senha</label>
+            </div>
+            <button id="btnEntrar" class="btn btn-primary w-100 py-2">Entrar</button>
+          </form>
+        </main>
+      </div>
+    </div>
+    <div class="registro">
+      <button id="btnRegistro" class="btn btn-primary">Registre-se</button>
+      <div id="registroForm" class="modalForm">
+        <main class="w-100 m-auto form-container">
+          <form class="modalForm-content animate" action="">
+            <span class="close" id="closeModalCadastro">&times;</span>
+            <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
+            <div class="form-floating">
+              <label class="floatingInput mb-0">Nome completo</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Nome" required>
+            </div>
+            <div class="form-floating mt-2">
+              <label class="floatingInput mb-0">Telefone</label>
+              <input type="tel" class="form-control" id="telefone" placeholder="telefone" required>
+            </div>
+            <p>Sexo:</p>
+            <div class="form-check">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino" class="form-check-label">Feminino</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino" class="form-check-label">Masculino</label>
+              </div>
+            </div>
+            <div class="form-floating">
+              <label class="floatingInput mb-0">E-mail</label>
+              <input type="email" class="form-control" id="emailInputTwo" placeholder="E-mail" required>
+            </div>
+            <div class="form-floating mt-2">
+              <label class="floatingInput mb-0">Senha</label>
+              <input type="password" class="form-control" id="senhaInputTwo" placeholder="Senha" required>
+            </div>
+            <button id="btnRegistrar" class="btn btn-primary w-100 py-2 mt-2">Registrar-se</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <span class="icons" id="closeSidebar"><i class="fa-solid fa-xmark" aria-hidden="true"
+        style="font-size: 20px; margin-top: 5px; margin-left: 3px;"></i></span>
+    <a href="index.html"><i class="fa-solid fa-house" style="padding-right: 7px;"></i>Home</a>
+    <a href="/learning/learning.html"><i class="fa-sharp fa-solid fa-book" style="padding-right: 7px;"></i>Learning</a>
+    <a href="/notes/notes.html"><i class="fa-regular fa-pen-to-square" style="padding-right: 7px;"></i>Notes</a>
+    <a href="/exercises/exercises.html"><i class="fa-solid fa-pencil" style="padding-right: 7px;"></i>Practing</a>
+    <a href="/Recommendations/tips.html"><i class="fas fa-book-open" style="padding-right: 7px;"></i>Tips</a>
+  </div>
+
+  <!-- Seção Home -->
+  <div class="home">
+    <h1>News in English</h1>
+    <h6>Train your english and stay informed <i class="fa fa-info-circle info-icon" id="infoIcon"></i></h6>
+    <div id="newsFeed" class="card-container">
+      <div class="news-card"></div>
+    </div>
+  </div>
+
+  <div id="infoModal" class="modalInfo">
+    <div class="modalInfo-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Como usar a seção "Home"</h2>
+      <p>Bem-vindo à nossa página inicial, onde você encontrará 8 cards com notícias atualizadas diretamente do The New York
+      Times.
+      Esta página foi projetada para fortalecer uma das habilidades essenciais no aprendizado de um novo idioma: a leitura.
+      Além de aprimorar seu "reading", você se manterá informado sobre os eventos mais recentes e relevantes ao redor do
+      mundo.
+      Navegar por essa página é simples e intuitivo, com uma apresentação visual atraente e organizada para garantir uma
+      experiência agradável e produtiva.
+      Explore cada card e mergulhe em um conteúdo rico e autêntico, ideal para enriquecer seu vocabulário e compreensão
+      linguística.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contacts">
+      <a href="https://www.instagram.com/marcello_hs/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5599988105045/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/MarceloHabreu" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p>MarceloHsilva @2024</P>
+  </footer>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="principal.js"></script>
+</body>
+
+</html>

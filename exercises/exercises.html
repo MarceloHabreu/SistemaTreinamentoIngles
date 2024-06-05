@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeakEase</title>
+    <link rel="shortcut icon" href="/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbarContainer">
+        <a id="logo">SpeakEase</a>
+        <span class="icons" id="openSidebar"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <div class="navbarItems">
+            <a href="../index.html">Home</a>
+            <a href="/learning/learning.html">Learning</a>
+            <a href="/notes/notes.html">Notes</a>
+            <a href="exercises.html">Practing</a>
+            <a href="/Recommendations/tips.html">Recommendations</a>
+        </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <span class="icons" id="closeSidebar"><i class="fa-solid fa-xmark" aria-hidden="true"
+                style="font-size: 20px; margin-top: 5px; margin-left: 3px;"></i></span>
+        <a href="../index.html"><i class="fa-solid fa-house" style="padding-right: 7px;"></i>Home</a>
+        <a href="/learning/learning.html"><i class="fa-sharp fa-solid fa-book" style="padding-right: 7px;"></i>Learning</a>
+        <a href="/notes/notes.html"><i class="fa-regular fa-pen-to-square" style="padding-right: 7px;"></i>Notes</a>
+        <a href="exercises.html"><i class="fa-solid fa-pencil" style="padding-right: 7px;"></i>Practing</a>
+        <a href="/Recommendations/tips.html"><i class="fas fa-book-open" style="padding-right: 7px;"></i>Tips</a>
+    </div>
+
+
+    <!-- Seção Practing -->
+    <div class="main-content">
+        <i class="fa fa-info-circle info-icon" id="infoIcon"></i>
+        <div class="container">
+            <div class="start-screen ">
+                <h1 class="heading"> Quiz in English</h1>
+                <div class="settings">
+                    <label for="num-questions">Number of Questions</label>
+                    <select name="" id="num0questions">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                    <label for="category">select category:</label>
+                    <select id="category-select">
+                        <option value="9">Any category</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="23">History</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="12">Music</option>
+                        <option value="14">Television</option>
+                        <option value="21">Sports</option>
+                        <option value="26">Celebrities</option>
+                        <option value="28">Vehicles</option>
+                        <option value="24">Politics</option>
+                        <option value="27">Animals</option>
+                        <option value="20">Mythology</option>
+                        <option value="12">Film</option>
+                        <option value="10">Books</option>
+                        <option value="15">Video Games</option>
+                        <option value="31">Japanese Anime & Manga</option>
+                    </select>
+                    <label for="difficulty">select dificulty</label>
+                    <select name="" id="difficulty">
+                        <option value="">any dificulty</option>
+                        <option value="easy">easy</option>
+                        <option value="medium">medium</option>
+                        <option value="hard">hard</option>
+                    </select>
+                    <label for="time">select time por question</label>
+                    <select name="" id="time">
+                        <option value="10">10 seconds</option>
+                        <option value="15">15 seconds</option>
+                        <option value="20">20 seconds</option>
+                        <option value="25">25 seconds</option>
+                        <option value="30">30 seconds</option>
+                        <option value="60">60 seconds</option>
+                    </select>
+                </div>
+                <button class="btn start">Start quiz</button>
+            </div>
+            <div class="quiz hide">
+                <div class="timer">
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                        <span class="progress-text">Loading..</span>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <div class="number">
+                        Question <span class="current">1</span><span class="total">/10</span>
+                    </div>
+                    <div class="question">This is a Question</div>
+                    <div class="answer-wrapper">
+                        <!-- <div class="answer selected">
+                            <span class="text">answer</span>
+                            <span class="checkbox">
+                                <span class="icon">✓</span>
+                            </span>
+                        </div>
+                        <div class="answer correct">
+                            <span class="text">answer</span>
+                            <span class="checkbox">
+                                <span class="icon">✓</span>
+                            </span>
+                        </div>
+                        <div class="answer wrong">
+                            <span class="text">answer</span>
+                            <span class="checkbox">
+                                <span class="icon">✓</span>
+                            </span>
+                        </div> -->
+                    </div>
+                    <button class="btn submit" disabled>Submit</button>
+                    <button class="btn next">Next</button>
+                </div>
+            </div>
+            <div class="end-screen hide">
+                <h1 class="heading">Quiz in English</h1>
+                <div class="score">
+                    <span class="score-text">Your Score:</span>
+                    <div>
+                    <span class="final-score">0</span>
+                    <span class="total-score">/10</span>
+                    </div>
+                </div>
+                <button class="btn restart">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modalInfo">
+        <div class="modalInfo-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Como usar a seção "Practing"</h2>
+          <p>No Practing, você encontrará uma forma divertida e desafiadora de treinar seu entendimento em inglês sob pressão.
+        Desenvolvi esta aba para que você possa responder perguntas sobre o assunto que preferir, simulando um ambiente de
+        prova. Escolha quantas perguntas deseja, selecione o tema (com uma variedade de tópicos disponíveis), defina o nível de
+        dificuldade ("easy", "medium", "hard") e determine quantos segundos terá para responder cada pergunta. Todas as
+        perguntas e alternativas serão em inglês. Se sentir dificuldade, comece no "easy" e aumente o tempo para responder,
+        focando em entender a pergunta ou seu contexto. Lembre-se de manter a constância em seu aprendizado. Assim como qualquer
+        outra habilidade, aprender um novo idioma não é fácil, mas também não é impossível!</p>
+        </div>
+      </div>
+
+
+    <footer>
+        <div class="contacts">
+            <a href="https://www.instagram.com/marcello_hs/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5599988105045/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/MarceloHabreu" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>MarceloHsilva @2024</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/principal.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
